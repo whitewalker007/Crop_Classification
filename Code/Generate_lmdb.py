@@ -18,10 +18,10 @@ from caffe.proto import caffe_pb2
 import lmdb
 
 #Image Size
-IMAGE_WIDTH = 128
-IMAGE_HEIGHT = 128
+IMG_WIDTH = 128
+IMG_HEIGHT = 128
 
-def transform_img(img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT):
+def transform_img(img, img_width=IMG_WIDTH, img_height=IMG_HEIGHT):
 
     # Performing histogram equalization
     img[:, :, 0] = cv2.equalizeHist(img[:, :, 0])
@@ -37,8 +37,8 @@ def transform_img(img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT):
 def make_datum(img, label):
     return caffe_pb2.Datum(
         channels=3,
-        width=IMAGE_WIDTH,
-        height=IMAGE_HEIGHT,
+        width=IMG_WIDTH,
+        height=IMG_HEIGHT,
         label=label,
         data=np.rollaxis(img, 2).tostring())
 
@@ -63,7 +63,7 @@ with in_db.begin(write=True) as in_txn:
         if in_idx %  6!= 0:
             continue
         img = cv2.imread(img_path, cv2.IMREAD_COLOR)
-        img = transform_img(img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT)
+        img = transform_img(img, img_width=IMG_WIDTH, img_height=IMG_HEIGHT)
         if 'wheat' in img_path:
             label=0
         elif 'barley' in img_path:
@@ -90,7 +90,7 @@ with in_db.begin(write=True) as in_txn:
         if in_idx % 6 == 0:
             continue
         img = cv2.imread(img_path, cv2.IMREAD_COLOR)
-        img = transform_img(img, img_width=IMAGE_WIDTH, img_height=IMAGE_HEIGHT)
+        img = transform_img(img, img_width=IMG_WIDTH, img_height=IMG_HEIGHT)
         if 'wheat' in img_path:
             label=0
         elif 'barley' in img_path:
