@@ -4,9 +4,8 @@ Description     :It divides the training images into 2 sets and stores them in l
 Author          :Nitin Shukla
 Date Created    :20170616
 '''
-
-import os
 import globp
+import os
 import random
 import numpy as np
 
