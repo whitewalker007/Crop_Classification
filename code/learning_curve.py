@@ -38,7 +38,7 @@ test_log = pd.read_csv(test_log_path, delim_whitespace=True)
 '''
 Making learning curve
 '''
-fig, ax1 = plt.subplots()
+fig, ax1 = plb.subplots()
 
 #Plotting training and test losses
 train_loss, = ax1.plot(train_log['#Iters'], train_log['TrainingLoss'], color='red',  alpha=.5)
@@ -54,10 +54,10 @@ ax2.set_ylim(ymin=0, ymax=1)
 ax2.set_ylabel('Accuracy', fontsize=15)
 ax2.tick_params(labelsize=15)
 #Adding legend
-plt.legend([train_loss, test_loss, test_accuracy], ['Training Loss', 'Test Loss', 'Test Accuracy'],  bbox_to_anchor=(1, 0.8))
-plt.title('Training Curve', fontsize=18)
+plb.legend([train_loss, test_loss, test_accuracy], ['Training Loss', 'Test Loss', 'Test Accuracy'],  bbox_to_anchor=(1, 0.8))
+plb.title('Training Curve', fontsize=18)
 #Saving learning curve
-plt.savefig(learning_curve_path)
+plb.savefig(learning_curve_path)
 
 '''
 Deleting training and test logs
