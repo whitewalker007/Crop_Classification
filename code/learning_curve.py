@@ -14,7 +14,7 @@ import matplotlib.pylab as plb
 
 plb.style.use('ggplot')
 
-caffe_path = '/home/ubuntu/caffe'
+caffe_path = '/home/ubuntu/caffe/'
 model_log_path = sys.argv[1]
 learning_curve_path = sys.argv[2]
 
