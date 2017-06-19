@@ -35,6 +35,10 @@ test_log_path = model_log_path + '.test'
 train_log = pd.read_csv(train_log_path, delim_whitespace=True)
 test_log = pd.read_csv(test_log_path, delim_whitespace=True)
 
+#Convert to float
+train_log = train_log.astype(float)
+test_log = test_log.astype(float)
+
 '''
 Making learning curve
 '''
