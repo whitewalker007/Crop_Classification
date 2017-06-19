@@ -42,6 +42,7 @@ test_log = test_log.astype(float)
 '''
 Making learning curve
 '''
+# Defining figure
 fig, ax1 = plb.subplots()
 
 #Plotting training and test losses
