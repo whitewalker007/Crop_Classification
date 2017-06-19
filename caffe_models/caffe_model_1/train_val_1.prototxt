@@ -34,6 +34,7 @@ layer {
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input/validation_lmdb"
     backend: LMDB
+    batch_size: 6
              }
        }
 layer {
