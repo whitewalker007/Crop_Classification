@@ -12,9 +12,10 @@ layer {
     scale : 0.00390625
 
                   }
-data_param {
+  data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input/train_lmdb"
     backend: LMDB
+    batch_size: 6
            }
        }
 layer {
