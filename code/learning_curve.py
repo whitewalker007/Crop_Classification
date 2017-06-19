@@ -30,8 +30,8 @@ command = caffe_path + 'tools/extra/parse_log.sh ' + model_log_path
 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
 process.wait()
 #Read training and test logs
-train_log_path = model_log_path + '.train'
-test_log_path = model_log_path + '.test'
+train_log_path = 'train_' + model_log_path
+test_log_path = 'test_' + model_log_path
 train_log = pd.read_csv(train_log_path, delim_whitespace=True)
 test_log = pd.read_csv(test_log_path, delim_whitespace=True)
 
