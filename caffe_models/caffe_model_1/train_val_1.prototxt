@@ -8,8 +8,9 @@ layer {
     phase: TRAIN
           }
   transform_param {
+    mirror : true
     crop_size: 128
-    scale : 0.00390625
+    mean_file: "/home/ubuntu/DeepLearning_crop_classification/input/mean.binaryproto"
 
                   }
   data_param {
@@ -29,7 +30,7 @@ layer {
   transform_param {
     mirror: false
     crop_size: 128
-    scale: 0.00390625
+    mean_file: "/home/ubuntu/DeepLearning_crop_classification/input/mean.binaryproto"
                   }
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input/validation_lmdb"
