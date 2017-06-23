@@ -9,14 +9,14 @@ layer {
           }
   transform_param {
     mirror : true
-    crop_size: 128
+    crop_size: 227
     mean_file: "/home/ubuntu/DeepLearning_crop_classification/input_1/mean.binaryproto"
 
                   }
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input_1/train_lmdb"
     backend: LMDB
-    batch_size: 12
+    batch_size: 8
            }
        }
 layer {
@@ -29,13 +29,13 @@ layer {
           }
   transform_param {
     mirror: false
-    crop_size: 128
+    crop_size: 227
     mean_file: "/home/ubuntu/DeepLearning_crop_classification/input_1/mean.binaryproto"
                   }
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input_1/validation_lmdb"
     backend: LMDB
-    batch_size: 12
+    batch_size: 2
              }
        }
 layer {
@@ -52,9 +52,9 @@ layer {
     decay_mult: 0
         }
   convolution_param {
-    num_output: 24
-    kernel_size: 4
-    stride: 2
+    num_output: 96
+    kernel_size: 7
+    stride: 4
     weight_filler {
       type: "gaussian"
       std: 0.01
@@ -78,7 +78,7 @@ layer {
   top: "pool1"
   pooling_param {
     pool: MAX
-    kernel_size: 3
+    kernel_size: 2
     stride: 2
                 }
       }
@@ -107,7 +107,7 @@ layer {
     decay_mult: 0
         }
   convolution_param {
-    num_output:48
+    num_output:120
     pad: 1
     kernel_size: 3
     group: 2
@@ -163,9 +163,10 @@ layer {
     decay_mult: 0
         }
   convolution_param {
-    num_output: 96
+    num_output: 256
     pad: 1
     kernel_size: 3
+    stride: 2
     weight_filler {
       type: "gaussian"
       std: 0.01
@@ -196,7 +197,7 @@ layer {
     decay_mult: 0
         }
   convolution_param {
-    num_output: 96
+    num_output: 256
     pad: 1
     kernel_size: 3
     group: 2
@@ -241,7 +242,7 @@ layer {
     decay_mult: 0
         }
   inner_product_param {
-    num_output: 4704
+    num_output: 9216
     weight_filler {
       type: "gaussian"
       std: 0.005
