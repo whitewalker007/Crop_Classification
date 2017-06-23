@@ -4,10 +4,10 @@ test_interval: 100
 base_lr: 0.001
 lr_policy: "step"
 gamma: 0.09
-stepsize: 50
+stepsize: 500
 display: 20
 max_iter: 5000
-momentum: 0.9
+momentum: 0.8
 weight_decay: 0.005
 snapshot: 500
 snapshot_prefix: "/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2"
