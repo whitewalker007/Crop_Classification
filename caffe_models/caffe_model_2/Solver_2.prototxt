@@ -1,7 +1,7 @@
 net: "/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2/train_val_2.prototxt"
 test_iter: 100
 test_interval: 100
-base_lr: 0.001
+base_lr: 0.0001
 lr_policy: "step"
 gamma: 0.1
 stepsize: 500
