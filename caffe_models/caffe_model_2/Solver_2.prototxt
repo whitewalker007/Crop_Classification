@@ -9,6 +9,6 @@ display: 20
 max_iter: 5000
 momentum: 0.9
 weight_decay: 0.005
-snapshot: 500
+snapshot: 1000
 snapshot_prefix: "/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2"
 solver_mode: CPU
