@@ -16,7 +16,7 @@ layer {
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input_1/train_lmdb"
     backend: LMDB
-    batch_size: 6
+    batch_size: 12
            }
        }
 layer {
@@ -35,7 +35,7 @@ layer {
   data_param {
     source: "/home/ubuntu/DeepLearning_crop_classification/input_1/validation_lmdb"
     backend: LMDB
-    batch_size: 6
+    batch_size: 12
              }
        }
 layer {
@@ -107,7 +107,7 @@ layer {
     decay_mult: 0
         }
   convolution_param {
-    num_output:
+    num_output:48
     pad: 1
     kernel_size: 3
     group: 2
