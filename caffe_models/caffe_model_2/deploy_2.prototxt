@@ -50,7 +50,7 @@ layer {
   bottom: "norm1"
   top: "conv2"
   convolution_param {
-    num_output: 120
+    num_output: 256
     pad: 1
     kernel_size: 3
     group: 2
@@ -90,7 +90,7 @@ layer {
   bottom: "norm2"
   top: "conv3"
   convolution_param {
-    num_output: 256
+    num_output: 384
     pad: 1
     kernel_size: 3
     stride: 2
@@ -108,7 +108,7 @@ layer {
   bottom: "conv3"
   top: "conv4"
   convolution_param {
-    num_output: 256
+    num_output: 384
     pad: 1
     kernel_size: 3
     group: 2
@@ -137,7 +137,7 @@ layer {
   bottom: "pool4"
   top: "fc1"
   inner_product_param {
-    num_output: 9216
+    num_output: 4096
                       }
       }
 layer {
