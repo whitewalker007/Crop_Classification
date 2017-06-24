@@ -52,7 +52,7 @@ mean_array = np.asarray(mean_blob.data, dtype=np.float32).reshape(
 
 #Read model architecture and trained model's weights
 net = caffe.Net('/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2/deploy_2.prototxt',
-                '/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2/caffe_model_2_iter_4000.caffemodel',
+                '/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/caffe_model_2_iter_3000.caffemodel',
                 caffe.TEST)
 
 #Define image transformers
