@@ -288,7 +288,7 @@ layer {
                       }
        }
 layer {
-  name: "relu5"
+  name: "relu6"
   type: "ReLU"
   bottom: "fc1"
   top: "fc1"
@@ -328,7 +328,7 @@ layer {
                       }
       }
 layer {
-  name: "relu6"
+  name: "relu7"
   type: "ReLU"
   bottom: "fc2"
   top: "fc2"
