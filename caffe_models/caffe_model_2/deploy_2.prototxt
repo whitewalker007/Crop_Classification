@@ -147,7 +147,7 @@ bottom: "fc1"
 top: "fc1"
       }
 layer {
-  name: "drop6"
+  name: "drop1"
   type: "Dropout"
   bottom: "fc1"
   top: "fc1"
