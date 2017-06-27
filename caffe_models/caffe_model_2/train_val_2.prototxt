@@ -267,6 +267,7 @@ layer {
   dropout_param {
     dropout_ratio: 0.5
                 }
+      }
 layer {
   name: "fc2"
   type: "InnerProduct"
