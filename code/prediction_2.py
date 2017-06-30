@@ -44,7 +44,7 @@ Reading mean image, caffe model and its weights
 '''
 #Read mean image
 mean_blob = caffe_pb2.BlobProto()
-with open('/home/ubuntu/DeepLearning_crop_classification/input_1/mean.binaryproto') as f:
+with open('/home/ubuntu/DeepLearning_crop_classification/input_2/mean.binaryproto') as f:
     mean_blob.ParseFromString(f.read())
 mean_array = np.asarray(mean_blob.data, dtype=np.float32).reshape(
     (mean_blob.channels, mean_blob.height, mean_blob.width))
@@ -64,7 +64,7 @@ transformer.set_transpose('data', (2,0,1))
 Making predicitions
 '''
 #Reading image paths
-test_img_paths = [img_path for img_path in glob.glob("/home/ubuntu/DeepLearning_crop_classification/input_1/test/*jpg")]
+test_img_paths = [img_path for img_path in glob.glob("/home/ubuntu/DeepLearning_crop_classification/input_2/test/*jpg")]
 
 #Making predictions
 test_ids = []
