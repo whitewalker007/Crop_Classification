@@ -220,7 +220,7 @@ layer {
 layer {
   name: "pool4"
   type: "Pooling"
-  bottom: "conv5"
+  bottom: "conv4"
   top: "pool4"
   pooling_param {
     pool: MAX
