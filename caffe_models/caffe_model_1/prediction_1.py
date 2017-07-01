@@ -19,8 +19,8 @@ from caffe.proto import caffe_pb2
 caffe.set_mode_cpu()
 
 #Spatial dimension
-IMG_WIDTH = 227
-IMG_HEIGHT = 227
+IMG_WIDTH = 256
+IMG_HEIGHT = 256
 
 '''
 Processing
