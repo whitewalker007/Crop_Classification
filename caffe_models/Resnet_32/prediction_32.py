@@ -51,8 +51,8 @@ mean_array = np.asarray(mean_blob.data, dtype=np.float32).reshape(
 
 
 #Read model architecture and trained model's weights
-net = caffe.Net('/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/Resnet_32/deploy_32.prototxt',
-                '/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/Resnet_32/Resnet_32_iter_5000.caffemodel',
+net = caffe.Net('/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/Resnet_32/deploy_32.prototxt',
+                '/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/Resnet_32/Resnet_32_iter_5000.caffemodel',
                 caffe.TEST)
 
 #Define image transformers
@@ -67,7 +67,7 @@ Making predicitions
 test_img_paths = [img_path for img_path in glob.glob("/home/ubuntu/DeepLearning_crop_classification/input_2/test/*jpg")]
 
 #Making predictions
-with open("/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/Resnet_32/Resnet_crop_32.csv","w") as f:
+with open("/home/ubuntu/DeepLearning_crop_classification/Crop_Classification/caffe_models/Resnet_32/Resnet_crop_32.csv","w") as f:
     f.write("Id,LEAVES,PLANT,PLOT,LABEL\n")
     for img_path in test_img_paths:
         img = cv2.imread(img_path, cv2.IMREAD_COLOR)
